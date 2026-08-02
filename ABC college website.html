@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>College Management System</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+header{
+    background:#003366;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    background:#00509e;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+nav ul li{
+    margin:10px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav ul li a:hover{
+    color:yellow;
+}
+
+.hero{
+    background:linear-gradient(to right,#004080,#0066cc);
+    color:white;
+    text-align:center;
+    padding:50px;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    margin:20px 0;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0px 2px 8px rgba(0,0,0,.2);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+table th, table td{
+    border:1px solid #ccc;
+    padding:10px;
+    text-align:center;
+}
+
+table th{
+    background:#003366;
+    color:white;
+}
+
+button{
+    background:#003366;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+button:hover{
+    background:#00509e;
+}
+
+footer{
+    background:#003366;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+<h1>ABC College Management System</h1>
+<p>Student Information Portal</p>
+</header>
+
+<nav>
+<ul>
+<li><a href="#students">Students</a></li>
+<li><a href="#classes">Classes</a></li>
+<li><a href="#attendance">Attendance</a></li>
+<li><a href="#placement">Placements</a></li>
+<li><a href="#transport">Transportation</a></li>
+<li><a href="#fees">Fees</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<h2>Welcome to ABC College</h2>
+<p>Student Management | Attendance | Placements | Fee Details</p>
+</section>
+
+<div class="container">
+
+<div class="card" id="students">
+<h2>Student Details</h2>
+
+<table>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Department</th>
+<th>Year</th>
+<th>Phone</th>
+</tr>
+
+<tr>
+<td>101</td>
+<td>Rahul Kumar</td>
+<td>CSE</td>
+<td>III</td>
+<td>9876543210</td>
+</tr>
+
+<tr>
+<td>102</td>
+<td>Priya Sharma</td>
+<td>ECE</td>
+<td>II</td>
+<td>9876543211</td>
+</tr>
+
+<tr>
+<td>103</td>
+<td>Ravi Teja</td>
+<td>AIML</td>
+<td>IV</td>
+<td>9876543212</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card" id="classes">
+
+<h2>Class Schedule</h2>
+
+<table>
+
+<tr>
+<th>Day</th>
+<th>9-10</th>
+<th>10-11</th>
+<th>11-12</th>
+<th>1-2</th>
+<th>2-3</th>
+</tr>
+
+<tr>
+<td>Monday</td>
+<td>Math</td>
+<td>Java</td>
+<td>DBMS</td>
+<td>Python</td>
+<td>Lab</td>
+</tr>
+
+<tr>
+<td>Tuesday</td>
+<td>English</td>
+<td>OS</td>
+<td>Java</td>
+<td>DBMS</td>
+<td>Sports</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card" id="attendance">
+
+<h2>Attendance</h2>
+
+<table>
+
+<tr>
+<th>Student</th>
+<th>Total Classes</th>
+<th>Present</th>
+<th>Attendance</th>
+</tr>
+
+<tr>
+<td>Rahul Kumar</td>
+<td>120</td>
+<td>110</td>
+<td>92%</td>
+</tr>
+
+<tr>
+<td>Priya Sharma</td>
+<td>120</td>
+<td>115</td>
+<td>96%</td>
+</tr>
+
+<tr>
+<td>Ravi Teja</td>
+<td>120</td>
+<td>108</td>
+<td>90%</td>
+</tr>
+
+</table>
+
+<button onclick="attendance()">Check Eligibility</button>
+
+<p id="result"></p>
+
+</div>
+
+<div class="card" id="placement">
+
+<h2>Placement Assistance</h2>
+
+<ul>
+
+<li>Resume Building Workshops</li>
+
+<li>Mock Interviews</li>
+
+<li>Aptitude Training</li>
+
+<li>Communication Skills</li>
+
+<li>Campus Recruitment Drives</li>
+
+<li>Internship Opportunities</li>
+
+</ul>
+
+</div>
+
+<div class="card" id="transport">
+
+<h2>Transportation</h2>
+
+<table>
+
+<tr>
+
+<th>Bus No</th>
+
+<th>Route</th>
+
+<th>Driver</th>
+
+<th>Contact</th>
+
+</tr>
+
+<tr>
+
+<td>1</td>
+
+<td>City Center</td>
+
+<td>Ramesh</td>
+
+<td>9876543210</td>
+
+</tr>
+
+<tr>
+
+<td>2</td>
+
+<td>North Zone</td>
+
+<td>Suresh</td>
+
+<td>9876543211</td>
+
+</tr>
+
+<tr>
+
+<td>3</td>
+
+<td>South Zone</td>
+
+<td>Mahesh</td>
+
+<td>9876543212</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="card" id="fees">
+
+<h2>Fee Structure</h2>
+
+<table>
+
+<tr>
+
+<th>Course</th>
+
+<th>Tuition Fee</th>
+
+<th>Transport Fee</th>
+
+<th>Total</th>
+
+</tr>
+
+<tr>
+
+<td>B.Tech CSE</td>
+
+<td>₹70,000</td>
+
+<td>₹15,000</td>
+
+<td>₹85,000</td>
+
+</tr>
+
+<tr>
+
+<td>B.Tech ECE</td>
+
+<td>₹68,000</td>
+
+<td>₹15,000</td>
+
+<td>₹83,000</td>
+
+</tr>
+
+<tr>
+
+<td>B.Tech AIML</td>
+
+<td>₹75,000</td>
+
+<td>₹15,000</td>
+
+<td>₹90,000</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>© 2026 ABC College Management System | All Rights Reserved</p>
+
+</footer>
+
+<script>
+
+function attendance(){
+
+document.getElementById("result").innerHTML=
+"Students with attendance above 75% are eligible for examinations.";
+
+}
+
+</script>
+
+</body>
+</html>
